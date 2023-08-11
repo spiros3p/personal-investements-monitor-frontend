@@ -10,7 +10,6 @@ export class SingleChartComponent implements OnInit {
     public graph: any;
 
     ngOnInit(): void {
-        console.log(this.resourceData);
         this.initGraph();
     }
 
@@ -19,7 +18,6 @@ export class SingleChartComponent implements OnInit {
 
         const values2 = this.resourceData.map((e) => e.valueInEuro);
         const timeStamps = this.resourceData.map((e) => e.timeStamp);
-        console.log(values1);
 
         this.graph = {
             data: [
