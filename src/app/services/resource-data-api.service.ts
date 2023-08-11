@@ -6,7 +6,7 @@ import { Observable, catchError, retry, throwError } from 'rxjs';
     providedIn: 'root',
 })
 export class ResourceDataApiService {
-    url = 'http://195.90.208.233:3000/resources';
+    url = 'http://pim-api.spiros.tpsflavor.site/resources';
     constructor(private http: HttpClient) {}
 
     getResourcesData(): Observable<any> {
