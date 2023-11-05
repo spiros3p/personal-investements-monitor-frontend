@@ -8,18 +8,12 @@ import { SingleChartComponent } from './components/single-chart/single-chart.com
 import * as PlotlyJS from 'plotly.js-dist-min';
 import { PlotlyModule } from 'angular-plotly.js';
 import { PageAllChartsComponent } from './components/page-all-charts/page-all-charts.component';
-import { PageSingleChartComponent } from './components/page-single-chart/page-single-chart.component';
 import { HttpClientModule } from '@angular/common/http';
 
 PlotlyModule.plotlyjs = PlotlyJS;
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        SingleChartComponent,
-        PageAllChartsComponent,
-        PageSingleChartComponent,
-    ],
+    declarations: [AppComponent, SingleChartComponent, PageAllChartsComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
