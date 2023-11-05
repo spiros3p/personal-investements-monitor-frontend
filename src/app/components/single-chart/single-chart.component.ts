@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'app-single-chart',
     templateUrl: './single-chart.component.html',
     styleUrls: ['./single-chart.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleChartComponent implements OnInit {
     @Input() resourceData: any[] = [];
