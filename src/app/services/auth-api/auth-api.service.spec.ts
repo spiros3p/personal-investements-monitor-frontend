@@ -1,16 +1,13 @@
-import { TestBed } from '@angular/core/testing';
-
 import { AuthApiService } from './auth-api.service';
+import { createServiceFactory, SpectatorService } from '@ngneat/spectator';
 
 describe('AuthApiService', () => {
-    let service: AuthApiService;
+    let spectator: SpectatorService<AuthApiService>;
+    const createService = createServiceFactory(AuthApiService);
 
-    beforeEach(() => {
-        TestBed.configureTestingModule({});
-        service = TestBed.inject(AuthApiService);
-    });
+    beforeEach(() => (spectator = createService()));
 
-    it('should be created', () => {
-        expect(service).toBeTruthy();
+    it('should...', () => {
+        expect(spectator.service).toBeTruthy();
     });
 });

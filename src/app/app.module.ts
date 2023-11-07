@@ -10,9 +10,15 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ChartModule } from 'primeng/chart';
 import 'chartjs-adapter-luxon';
 import { HttpRequestInterceptor } from './interceptors/http.interceptor';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
-    declarations: [AppComponent, SingleChartComponent, PageAllChartsComponent],
+    declarations: [
+        AppComponent,
+        SingleChartComponent,
+        PageAllChartsComponent,
+        LoginComponent,
+    ],
     imports: [
         BrowserModule,
         AppRoutingModule,
