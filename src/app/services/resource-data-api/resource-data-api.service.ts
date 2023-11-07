@@ -1,20 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError, retry, throwError } from 'rxjs';
+import { Observable, of, catchError, retry, throwError } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
     providedIn: 'root',
 })
 export class ResourceDataApiService {
-    url = 'https://pim-api.spiros.tpsflavor.site/resources';
+    private url = environment.endpoints.resourceDataServerApi;
+    private endpoint = '/resources';
+    private get path() {
+        return this.url + this.endpoint;
+    }
+
     constructor(private http: HttpClient) {}
 
     getResourcesData(): Observable<any> {
         return this.http
-            .get<any>(this.url)
+            .get<any>(this.path)
             .pipe(retry(1), catchError(this.handleError));
     }
-    
+
     // Error handling
     handleError(error: any) {
         let errorMessage = '';
@@ -25,7 +31,8 @@ export class ResourceDataApiService {
             // Get server-side error
             errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
         }
-        window.alert(errorMessage);
+        // window.alert(errorMessage);
+        console.error(errorMessage);
         return throwError(() => {
             return errorMessage;
         });

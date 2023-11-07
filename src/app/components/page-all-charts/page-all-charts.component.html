@@ -1,6 +1,6 @@
-<div class="container-xl py-2">
+<div class="container-fluid py-2">
     <div class="row gy-2 justify-content-center">
-        <div class="col-auto" *ngFor="let resourceData of resourcesData">
+        <div class="col-auto mb-1" *ngFor="let resourceData of resourcesData">
             <app-single-chart [resourceData]="resourceData"></app-single-chart>
         </div>
     </div>

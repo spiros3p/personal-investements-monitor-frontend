@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+// import { ChartOptions } from 'chart.js';
 
 @Component({
     selector: 'app-single-chart',
     templateUrl: './single-chart.component.html',
     styleUrls: ['./single-chart.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleChartComponent implements OnInit {
     @Input() resourceData: any[] = [];
@@ -14,41 +15,104 @@ export class SingleChartComponent implements OnInit {
         this.initGraph();
     }
 
+    documentStyle = getComputedStyle(document.documentElement);
+    textColor = this.documentStyle.getPropertyValue('--text-color');
+    textColorSecondary = this.documentStyle.getPropertyValue('--text-color-secondary');
+    surfaceBorder = this.documentStyle.getPropertyValue('--surface-border');
+
     initGraph() {
         const values1 = this.resourceData.map((e) => e.value);
-
         const values2 = this.resourceData.map((e) => e.valueInEuro);
-        const timeStamps = this.resourceData.map((e) => e.timeStamp);
+        const timeStamps = this.resourceData.map((e) => new Date(e.timeStamp));
 
         this.graph = {
-            data: [
-                {
-                    x: timeStamps,
-                    y: values1,
-                    type: 'scatter',
-                    mode: 'lines',
-                    marker: { color: 'red' },
-                    showlegend: false,
+            data: {
+                labels: timeStamps,
+                datasets: [
+                    {
+                        label: this.parseTitle(this.resourceData[0].name),
+                        fill: false,
+                        borderColor: 'red',
+                        yAxisID: 'y',
+                        tension: 0.4,
+                        data: values1,
+                    },
+                ],
+            },
+            options: {
+                stacked: true,
+                maintainAspectRatio: false,
+                aspectRatio: 0.9,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'black',
+                        },
+                    },
                 },
-            ],
-            layout: { width: 350, height: 270, title: this.resourceData[0].name },
-            config: {
-                displayModeBar: false, // this is the line that hides the bar.
+                scales: {
+                    x: {
+                        ticks: {
+                            color: this.textColorSecondary,
+                            font: {
+                                size: 10,
+                            },
+                        },
+                        grid: {
+                            color: this.surfaceBorder,
+                        },
+                        type: 'time',
+                        time: {
+                            tooltipFormat: 'DD T',
+                        },
+                    },
+                    y: {
+                        type: 'linear',
+                        display: true,
+                        position: 'right',
+                        ticks: {
+                            color: this.textColorSecondary,
+                        },
+                        grid: {
+                            color: this.surfaceBorder,
+                        },
+                    },
+                },
             },
         };
+
         if (this.checkIfEuro(this.resourceData)) {
-            this.graph.data.push({
-                x: timeStamps,
-                y: values2,
-                type: 'scatter',
-                mode: 'lines',
-                marker: { color: 'blue' },
-                showlegend: false,
+            this.graph.data.datasets.push({
+                label: 'in Euro',
+                fill: false,
+                borderColor: 'blue',
+                yAxisID: 'y1',
+                tension: 0.4,
+                data: values2,
             });
+            this.graph.options.scales['y1'] = {
+                type: 'linear',
+                display: true,
+                position: 'left',
+                ticks: {
+                    color: this.textColorSecondary,
+                    callback: function (value: any, index: any, ticks: any) {
+                        return value + '€';
+                    },
+                },
+                grid: {
+                    drawOnChartArea: false,
+                    color: this.surfaceBorder,
+                },
+            };
         }
     }
 
-    checkIfEuro(dataArray: any): boolean {
+    private checkIfEuro(dataArray: any): boolean {
         return !!dataArray[0]['valueInEuro'];
+    }
+
+    private parseTitle(title: string): string {
+        return title.charAt(0).toUpperCase() + title.split('-').join(' ').slice(1);
     }
 }

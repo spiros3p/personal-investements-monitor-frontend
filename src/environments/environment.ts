@@ -4,6 +4,9 @@
 
 export const environment = {
     production: false,
+    endpoints: {
+        resourceDataServerApi: 'http://localhost:3000',
+    },
 };
 
 /*
