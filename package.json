@@ -5,7 +5,6 @@
         "ng": "ng",
         "start": "ng serve",
         "build": "ng build --base-href https://spiros3p.github.io/personal-investments-monitor-frontend/",
-        "build:prod": "ng build --prod --base-href https://spiros3p.github.io/personal-investments-monitor-frontend/",
         "watch": "ng build --watch --configuration development",
         "test": "jest --coverage",
         "e2e": "playwright test",
