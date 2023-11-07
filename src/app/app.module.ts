@@ -6,14 +6,23 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SingleChartComponent } from './components/single-chart/single-chart.component';
 import { PageAllChartsComponent } from './components/page-all-charts/page-all-charts.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ChartModule } from 'primeng/chart';
 import 'chartjs-adapter-luxon';
+import { HttpRequestInterceptor } from './interceptors/http.interceptor';
 
 @NgModule({
     declarations: [AppComponent, SingleChartComponent, PageAllChartsComponent],
-    imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule, ChartModule],
-    providers: [],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        NgbModule,
+        HttpClientModule,
+        ChartModule,
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: HttpRequestInterceptor, multi: true },
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
