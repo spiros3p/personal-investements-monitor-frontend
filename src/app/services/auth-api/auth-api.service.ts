@@ -22,7 +22,7 @@ export class AuthApiService {
         );
     }
 
-    login(username: string, password: string): Observable<any> {
+    login(username: string | any, password: string | any): Observable<any> {
         return this.http.post<any>(
             `${this.basePath}/login`,
             { username, password },
