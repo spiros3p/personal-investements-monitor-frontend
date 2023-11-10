@@ -7,7 +7,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "angular-template-jest-spectator-playwright": {
+        "personal-investments-monitor-frontend": {
             "projectType": "application",
             "schematics": {
                 "@ngneat/spectator:spectator-component": {
@@ -27,9 +27,15 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "tsconfig.app.json",
                         "inlineStyleLanguage": "scss",
-                        "assets": ["src/favicon.ico", "src/assets"],
+                        "assets": [
+                          "src/favicon.ico",
+                          "src/assets",
+                          "src/manifest.webmanifest"
+                        ],
                         "styles": ["src/styles.scss"],
-                        "scripts": []
+                        "scripts": [],
+                        "serviceWorker": true,
+                        "ngswConfigPath": "ngsw-config.json"
                     },
                     "configurations": {
                         "production": {
@@ -68,10 +74,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "angular-template-jest-spectator-playwright:build:production"
+                            "browserTarget": "personal-investments-monitor-frontend:build:production"
                         },
                         "development": {
-                            "browserTarget": "angular-template-jest-spectator-playwright:build:development"
+                            "browserTarget": "personal-investments-monitor-frontend:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -79,7 +85,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "angular-template-jest-spectator-playwright:build"
+                        "browserTarget": "personal-investments-monitor-frontend:build"
                     }
                 },
                 "lint": {

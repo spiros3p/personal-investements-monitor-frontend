@@ -1,6 +1,6 @@
 {
-    "name": "angular-template-jest-spectator-playwright",
-    "version": "0.0.0",
+    "name": "personal-investments-monitor-frontend",
+    "version": "0.0.1",
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
@@ -23,6 +23,7 @@
         "@angular/platform-browser": "^16.0.4",
         "@angular/platform-browser-dynamic": "^16.0.4",
         "@angular/router": "^16.0.4",
+        "@angular/service-worker": "^16.0.4",
         "@ng-bootstrap/ng-bootstrap": "^15.0.0",
         "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.0",

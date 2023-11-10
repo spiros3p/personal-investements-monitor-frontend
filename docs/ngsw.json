@@ -1,0 +1,89 @@
+{
+  "configVersion": 1,
+  "timestamp": 1699653732903,
+  "index": "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/favicon.ico",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/main.df26c39d25bd3678.js",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/manifest.webmanifest",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/polyfills.6244892098127355.js",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/runtime.d6d9587a6d3c57fd.js",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/styles.acac76900f60b63d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/Inter-italic.var.958a0b9742fb3ae8.woff2",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/Inter-roman.var.b2129c009ce46d43.woff2",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-128x128.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-144x144.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-152x152.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-192x192.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-384x384.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-512x512.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-72x72.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-96x96.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/color.dae87a04d07ca92b.png",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/hue.8b1818380241e6ac.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/Inter-italic.var.958a0b9742fb3ae8.woff2": "6f20a046917bf86d4b6cc29c4e2515bd64d2cb9b",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/Inter-roman.var.b2129c009ce46d43.woff2": "7a2602d2ebb08ce895e33addb6fe595f1029431e",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-128x128.png": "0e841fb3b485175147081df51a4df30e0a1d5843",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-144x144.png": "3bcbe9f61019707633ce3673d54f91fcbf7d191a",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-152x152.png": "3bcbe9f61019707633ce3673d54f91fcbf7d191a",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-192x192.png": "3bcbe9f61019707633ce3673d54f91fcbf7d191a",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-384x384.png": "fe72caea20f92c5d5f704e5131b8cbd4337aae30",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-512x512.png": "01bf7b96cbbfbf4cb77e7475f934f627f2560e7f",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-72x72.png": "67e7224e207ebe73c6d7ce458293564358f0f03d",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/assets/icons/icon-96x96.png": "56f0d1798227f3fbe29cd075ad920055101619a2",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/favicon.ico": "e0852a24bbbe27ac1e147e71d7af5bc18036e045",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html": "05c61bcd7667edd2f9fe1f5a8b448ea3ae786c5b",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/main.df26c39d25bd3678.js": "ec8cea61979501891216ebd82225ab3c4eb556ea",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/manifest.webmanifest": "419b591770214da83631b64d2bf3a9931040982c",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/polyfills.6244892098127355.js": "82eccc82de229651cbd1fe1c94590e24322728ef",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/runtime.d6d9587a6d3c57fd.js": "870a9963b9519a80ba575b52137609c1d76ae38b",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/styles.acac76900f60b63d.css": "bab5e6ba53e7cea44240e6f9ab9e5816ffc5ba10"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
