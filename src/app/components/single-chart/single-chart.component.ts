@@ -1,11 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-// import { ChartOptions } from 'chart.js';
+import { Component, Input, OnInit } from '@angular/core';
+import { Chart } from 'chart.js';
+import zoomPlugin from 'chartjs-plugin-zoom';
+Chart.register(zoomPlugin);
 
 @Component({
     selector: 'app-single-chart',
     templateUrl: './single-chart.component.html',
     styleUrls: ['./single-chart.component.scss'],
-    // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SingleChartComponent implements OnInit {
     @Input() resourceData: any[] = [];
@@ -47,6 +48,17 @@ export class SingleChartComponent implements OnInit {
                     legend: {
                         labels: {
                             color: 'black',
+                        },
+                    },
+                    zoom: {
+                        zoom: {
+                            wheel: {
+                                enabled: true,
+                            },
+                            pinch: {
+                                enabled: true,
+                            },
+                            mode: 'xy',
                         },
                     },
                 },
