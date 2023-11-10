@@ -33,7 +33,6 @@ export class LoginComponent {
                     summary: 'Success',
                     detail: 'Successful log in!',
                 });
-                // localStorage.setItem('currentUser', JSON.stringify(response.user));
                 setTimeout(() => {
                     this._router.navigate(['/']);
                 }, 700);

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, tap } from 'rxjs';
 
 import { environment } from 'src/environments/environment';
 
@@ -23,10 +23,16 @@ export class AuthApiService {
     }
 
     login(username: string | any, password: string | any): Observable<any> {
-        return this.http.post<any>(
-            `${this.basePath}/login`,
-            { username, password },
-            this.httpOptions
-        );
+        return this.http
+            .post<any>(
+                `${this.basePath}/login`,
+                { username, password },
+                this.httpOptions
+            )
+            .pipe(
+                tap((res) => {
+                    localStorage.setItem(environment.localStorageKey.token, res?.token);
+                })
+            );
     }
 }

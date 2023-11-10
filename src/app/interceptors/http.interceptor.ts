@@ -6,24 +6,17 @@ import {
     HttpRequest,
 } from '@angular/common/http';
 
-import { Observable, tap } from 'rxjs';
+import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 /** Inject With Credentials into the request */
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
-    token: any;
-
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+        const token = localStorage.getItem(environment.localStorageKey.token);
         req = req.clone({
-            headers: req.headers.set('Authorization', `Bearer ${this.token}`),
+            headers: req.headers.set('Authorization', `Bearer ${token}`),
         });
-
-        return next.handle(req).pipe(
-            tap((res: any) => {
-                if (res?.body?.token) {
-                    this.token = res?.body?.token;
-                }
-            })
-        );
+        return next.handle(req);
     }
 }

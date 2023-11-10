@@ -7,6 +7,9 @@ export const environment = {
     endpoints: {
         resourceDataServerApi: 'http://localhost:3000',
     },
+    localStorageKey: {
+        token: 'token',
+    },
 };
 
 /*

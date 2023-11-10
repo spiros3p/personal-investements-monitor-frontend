@@ -3,4 +3,7 @@ export const environment = {
     endpoints: {
         resourceDataServerApi: 'https://pim-api.spiros.tpsflavor.site',
     },
+    localStorageKey: {
+        token: 'token',
+    },
 };
