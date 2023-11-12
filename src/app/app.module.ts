@@ -17,6 +17,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { PeriodsRateChangeComponent } from './components/periods-rate-change/periods-rate-change.component';
 import { NumberSuffixPipe } from './pipes/number-suffix';
 import { CurrentAmountDisplayComponent } from './components/current-amount-display/current-amount-display.component';
+import { RatesDisplayBarComponent } from './components/rates-display-bar/rates-display-bar.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +28,7 @@ import { CurrentAmountDisplayComponent } from './components/current-amount-displ
         PeriodsRateChangeComponent,
         NumberSuffixPipe,
         CurrentAmountDisplayComponent,
+        RatesDisplayBarComponent,
     ],
     imports: [
         BrowserModule,

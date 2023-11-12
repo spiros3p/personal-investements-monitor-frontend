@@ -62,13 +62,14 @@ export class DataMapperService {
         return {
             valueChange: latestValue - e[key],
             percentageChange:
-                this.calcPercentageChange(e[key], latestValue).toFixed(2) + '%',
+                this.calcPercentageChange(e[key], latestValue)?.toFixed(1) + '%',
             daysAgo,
             name: e.name
         };
     }
 
     private calcPercentageChange(oldValue: any, newValue: any) {
+        if (oldValue == undefined || newValue == undefined) return 0
         return ((newValue - oldValue) / oldValue) * 100;
     }
 }

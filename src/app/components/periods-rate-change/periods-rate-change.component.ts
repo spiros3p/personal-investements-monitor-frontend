@@ -1,6 +1,5 @@
 import { Component, Input, OnInit, signal } from '@angular/core';
 import { DataMapperService } from 'src/app/services/data-mapper/data-mapper.service';
-import { optionsForValueChanges } from './options';
 
 @Component({
     selector: 'app-periods-rate-change',
