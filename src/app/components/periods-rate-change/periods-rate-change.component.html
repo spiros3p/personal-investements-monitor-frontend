@@ -13,9 +13,9 @@
         [ngClass]="decideBadgeBG(item.valueChange)"
     >
         <i *ngIf="isPositive(item.valueChange)" class="bi bi-plus"></i>
-        <span *ngIf="!isNil(item.valueChange)" class="valueChange">{{
-            (item?.valueChange || 0 | numberSuffix)?.toFixed(options?.noOfDecimals)
-        }}</span>
+        <span *ngIf="!isNil(item.valueChange)" class="valueChange">
+            {{ parseToFixed(item?.valueChange | numberSuffix) }}
+        </span>
         <span *ngIf="!isNil(item.valueChange)" class="percentageChange">
             ({{ item.percentageChange }})</span
         >

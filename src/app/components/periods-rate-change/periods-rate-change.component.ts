@@ -18,6 +18,10 @@ export class PeriodsRateChangeComponent implements OnInit {
         this.determinValues();
     }
 
+    parseToFixed(val: string | number) {
+        return Number(val).toFixed(this.options?.noOfDecimals);
+    }
+
     private determinValues() {
         if (this.data[0].type == 'Percentage') return;
         const latestDate = new Date(this.data[this.data.length - 1].timeStamp);
