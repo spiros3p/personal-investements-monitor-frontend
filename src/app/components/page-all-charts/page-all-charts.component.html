@@ -1,7 +1,12 @@
 <div class="container-fluid py-2">
     <div class="row gy-2 justify-content-center">
         <div class="col-12">
-            <app-rates-display-bar [data]="ratesData$ | async"></app-rates-display-bar>
+            <app-rates-display-bar [data]="_ratesData()"></app-rates-display-bar>
+        </div>
+        <div class="col-12">
+            <app-total-eur-amounts-bar
+                [totalEurFromCrypto]="_totalEurFromCrypto()"
+            ></app-total-eur-amounts-bar>
         </div>
         <div class="col-auto mb-1" *ngFor="let data of resourcesData$ | async">
             <app-single-chart

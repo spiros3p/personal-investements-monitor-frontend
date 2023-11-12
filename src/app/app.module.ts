@@ -18,6 +18,7 @@ import { PeriodsRateChangeComponent } from './components/periods-rate-change/per
 import { NumberSuffixPipe } from './pipes/number-suffix';
 import { CurrentAmountDisplayComponent } from './components/current-amount-display/current-amount-display.component';
 import { RatesDisplayBarComponent } from './components/rates-display-bar/rates-display-bar.component';
+import { TotalEurAmountsBarComponent } from './components/total-eur-amounts-bar/total-eur-amounts-bar.component';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { RatesDisplayBarComponent } from './components/rates-display-bar/rates-d
         NumberSuffixPipe,
         CurrentAmountDisplayComponent,
         RatesDisplayBarComponent,
+        TotalEurAmountsBarComponent,
     ],
     imports: [
         BrowserModule,
