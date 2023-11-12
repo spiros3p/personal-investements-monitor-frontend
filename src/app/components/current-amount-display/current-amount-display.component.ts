@@ -9,4 +9,8 @@ export class CurrentAmountDisplayComponent {
     @Input() currentAmountInEur = 0;
     @Input() currentValue = 0;
     @Input() options: any = {};
+
+    get _currentAmountInEur(){
+        return Number(this.currentAmountInEur).toFixed(2)
+    }
 }

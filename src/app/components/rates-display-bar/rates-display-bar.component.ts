@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
     templateUrl: './rates-display-bar.component.html',
     styleUrls: ['./rates-display-bar.component.scss'],
 })
-export class RatesDisplayBarComponent {}
+export class RatesDisplayBarComponent {
+    // @Input() data
+}

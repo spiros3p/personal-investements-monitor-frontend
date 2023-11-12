@@ -1,5 +1,8 @@
 <div class="container-fluid py-2">
     <div class="row gy-2 justify-content-center">
+        <div class="col-12">
+            <!-- <app-rates-display-bar data=""></app-rates-display-bar> -->
+        </div>
         <div class="col-auto mb-1" *ngFor="let data of resourcesData$ | async">
             <app-single-chart
                 [resourceData]="data"
