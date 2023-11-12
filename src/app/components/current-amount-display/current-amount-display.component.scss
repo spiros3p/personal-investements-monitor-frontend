@@ -1,0 +1,18 @@
+.latest-display-col{
+    text-align: center;
+    border-radius: 6px;
+
+    &.redBg {
+        background-color: #ff00003b;
+    }
+
+    &.blueBg {
+        background-color: #0000ff29;
+    }
+
+    & .symbol{
+        font-size: 10px;
+        font-weight: bold;
+    }
+}
+

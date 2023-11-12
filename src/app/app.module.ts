@@ -14,6 +14,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
 import 'chartjs-adapter-luxon';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { PeriodsRateChangeComponent } from './components/periods-rate-change/periods-rate-change.component';
+import { NumberSuffixPipe } from './pipes/number-suffix';
+import { CurrentAmountDisplayComponent } from './components/current-amount-display/current-amount-display.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +24,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
         SingleChartComponent,
         PageAllChartsComponent,
         LoginComponent,
+        PeriodsRateChangeComponent,
+        NumberSuffixPipe,
+        CurrentAmountDisplayComponent,
     ],
     imports: [
         BrowserModule,

@@ -10,7 +10,17 @@ Chart.register(zoomPlugin);
 })
 export class SingleChartComponent implements OnInit {
     @Input() resourceData: any[] = [];
+    @Input() optsForValueChanges: any = {};
+    @Input() optsForEuroChanges: any = {};
     public graph: any;
+
+    get latestValue() {
+        return this.resourceData[this.resourceData.length - 1]['value'];
+    }
+
+    get latestValueInEuro() {
+        return this.resourceData[this.resourceData.length - 1]['valueInEuro'];
+    }
 
     ngOnInit(): void {
         this.initGraph();

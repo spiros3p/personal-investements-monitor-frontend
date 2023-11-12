@@ -1,0 +1,37 @@
+.percentageChange {
+    font-weight: 400;
+    font-size: 10px;
+}
+
+.valueChange {
+}
+
+.daysAgo {
+    color: #20efff;
+    font-weight: 500;
+}
+
+.custom-div {
+    border-radius: 6px;
+    padding: 4px 0;
+    position: relative;
+    padding-left: 11px;
+    margin-left: -4px;
+    margin-right: -4px;
+
+    &.redBg {
+        background-color: #ff00003b;
+    }
+
+    &.blueBg {
+        background-color: #0000ff29;
+    }
+}
+
+.symbol {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    font-weight: bold;
+}

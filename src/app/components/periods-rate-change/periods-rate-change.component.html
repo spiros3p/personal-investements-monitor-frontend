@@ -1,0 +1,25 @@
+<div
+    class="d-flex justify-content-around gap-1 mb-1 custom-div"
+    [ngClass]="{
+        blueBg: options?.key === 'valueInEuro',
+        redBg: options?.key === 'value'
+    }"
+>
+    <span *ngIf="options?.key === 'valueInEuro'" class="symbol">€</span>
+    <span *ngIf="options?.key === 'value'" class="symbol">Χ</span>
+    <span
+        *ngFor="let item of itemList()"
+        class="badge"
+        [ngClass]="decideBadgeBG(item.valueChange)"
+    >
+        <i *ngIf="isPositive(item.valueChange)" class="bi bi-plus"></i>
+        <span *ngIf="!isNil(item.valueChange)" class="valueChange">{{
+            (item.valueChange | numberSuffix).toFixed(options.noOfDecimals)
+        }}</span>
+        <span *ngIf="!isNil(item.valueChange)" class="percentageChange">
+            ({{ item.percentageChange }})</span
+        >
+        <span *ngIf="isNil(item.valueChange)" class="percentageChange"> (0%)</span>
+        <span class="daysAgo"> {{ item.daysAgo }}d </span>
+    </span>
+</div>
