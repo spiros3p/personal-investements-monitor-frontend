@@ -14,7 +14,7 @@
     >
         <i *ngIf="isPositive(item.valueChange)" class="bi bi-plus"></i>
         <span *ngIf="!isNil(item.valueChange)" class="valueChange">{{
-            (item.valueChange | numberSuffix).toFixed(options.noOfDecimals)
+            (item.valueChange | numberSuffix)?.toFixed(options?.noOfDecimals)
         }}</span>
         <span *ngIf="!isNil(item.valueChange)" class="percentageChange">
             ({{ item.percentageChange }})</span
