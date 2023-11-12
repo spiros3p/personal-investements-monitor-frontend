@@ -19,7 +19,13 @@ export class PeriodsRateChangeComponent implements OnInit {
     }
 
     parseToFixed(val: string | number) {
-        return Number(val).toFixed(this.options?.noOfDecimals);
+        let suffix = ''
+        if (typeof val === 'string') {
+            suffix = val.substring(val.length-1);
+            val = val.substring(0, val.length-1)
+        }
+        if (val === undefined || val === null) return 0;
+        return Number(val).toFixed(this.options?.noOfDecimals)+suffix;
     }
 
     private determinValues() {

@@ -62,7 +62,7 @@ export class DataMapperService {
         return {
             valueChange: latestValue - e[key],
             percentageChange:
-                this.calcPercentageChange(e[key], latestValue)?.toFixed(1) + '%',
+                this.calcPercentageChange(e[key], latestValue).toFixed(1) + '%',
             daysAgo,
             name: e.name
         };
