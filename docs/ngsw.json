@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1699803041308,
+  "timestamp": 1699804130665,
   "index": "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html",
   "assetGroups": [
     {
@@ -13,7 +13,7 @@
       "urls": [
         "https://spiros3p.github.io/personal-investments-monitor-frontend/favicon.ico",
         "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html",
-        "https://spiros3p.github.io/personal-investments-monitor-frontend/main.98b0f34d6dcb57e3.js",
+        "https://spiros3p.github.io/personal-investments-monitor-frontend/main.8841b3e986eb91eb.js",
         "https://spiros3p.github.io/personal-investments-monitor-frontend/manifest.webmanifest",
         "https://spiros3p.github.io/personal-investments-monitor-frontend/polyfills.6244892098127355.js",
         "https://spiros3p.github.io/personal-investments-monitor-frontend/runtime.d6d9587a6d3c57fd.js",
@@ -64,8 +64,8 @@
     "https://spiros3p.github.io/personal-investments-monitor-frontend/color.dae87a04d07ca92b.png": "ff4c4bcb2207891b292f544edb4da9d2df5d45cf",
     "https://spiros3p.github.io/personal-investments-monitor-frontend/favicon.ico": "e0852a24bbbe27ac1e147e71d7af5bc18036e045",
     "https://spiros3p.github.io/personal-investments-monitor-frontend/hue.8b1818380241e6ac.png": "f81ae627637a684614aa726e206c73ce099a01fd",
-    "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html": "952e250c01818bbadfc3006f80a0affdb3560df9",
-    "https://spiros3p.github.io/personal-investments-monitor-frontend/main.98b0f34d6dcb57e3.js": "8459c9cf28694cc65c6b2d9dcc0960a60f95e480",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/index.html": "9ef4e04b667a5cb1de655fbc67251b5d941aff61",
+    "https://spiros3p.github.io/personal-investments-monitor-frontend/main.8841b3e986eb91eb.js": "fbbeb9315f67629a40fb9d11c564aa77a0be8160",
     "https://spiros3p.github.io/personal-investments-monitor-frontend/manifest.webmanifest": "419b591770214da83631b64d2bf3a9931040982c",
     "https://spiros3p.github.io/personal-investments-monitor-frontend/polyfills.6244892098127355.js": "82eccc82de229651cbd1fe1c94590e24322728ef",
     "https://spiros3p.github.io/personal-investments-monitor-frontend/runtime.d6d9587a6d3c57fd.js": "870a9963b9519a80ba575b52137609c1d76ae38b",
