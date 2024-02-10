@@ -26,7 +26,7 @@ export const optionsForValueChanges = {
     'btc-net-balance': {
         daysAgo: [1, 7, 30],
         key: 'value',
-        symbol: 'SDM',
+        symbol: 'BTC',
         noOfDecimals: 8,
     },
 };
