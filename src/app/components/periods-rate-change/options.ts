@@ -35,6 +35,12 @@ export const optionsForValueChanges = {
         symbol: 'SOL',
         noOfDecimals: 3,
     },
+    'usdc-net-balance': {
+        daysAgo: [1, 7, 30],
+        key: 'value',
+        symbol: 'USDC',
+        noOfDecimals: 2,
+    },
 };
 
 export const optionsForEuroChanges = {
@@ -69,6 +75,12 @@ export const optionsForEuroChanges = {
         noOfDecimals: 2,
     },
     'solana-net-balance': {
+        daysAgo: [1, 7, 30],
+        key: 'valueInEuro',
+        symbol: 'EUR',
+        noOfDecimals: 2,
+    },
+    'usdc-net-balance': {
         daysAgo: [1, 7, 30],
         key: 'valueInEuro',
         symbol: 'EUR',
