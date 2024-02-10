@@ -12,15 +12,18 @@
 }
 
 .custom-div {
-    border-radius: 6px;
-    padding: 4px 0;
     position: relative;
-    padding-left: 11px;
-    margin-left: -4px;
-    margin-right: -4px;
-
+    border-radius: 6px;
+    padding: 4px 0 4px 15px;
+    margin-left: -1px;
+    margin-right: -1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
     &.redBg {
         background-color: #ff00003b;
+        padding: 4px 5px !important;
     }
 
     &.blueBg {
@@ -29,9 +32,9 @@
 }
 
 .symbol {
-    bottom: 0;
     position: absolute;
-    left: 0;
+    top: 6px;
+    left: 4px;
     font-size: 12px;
     font-weight: bold;
 }

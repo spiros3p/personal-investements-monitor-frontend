@@ -1,10 +1,15 @@
 .plotly-container {
     background-color: rgba(230, 230, 255, 0.5);
     display: inline-block;
-    min-width: 375px;
+    width: 350px;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.75);
+
+    @media screen and (min-width: 848px) {
+        min-width: 400px;
+        width: auto;
+      }
 }
