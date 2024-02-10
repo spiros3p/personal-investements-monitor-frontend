@@ -8,7 +8,7 @@ describe('PeriodsRateChangeComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [PeriodsRateChangeComponent]
+            declarations: [PeriodsRateChangeComponent],
         });
         fixture = TestBed.createComponent(PeriodsRateChangeComponent);
         component = fixture.componentInstance;

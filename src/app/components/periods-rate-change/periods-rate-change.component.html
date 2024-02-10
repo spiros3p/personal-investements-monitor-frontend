@@ -18,7 +18,7 @@
                 {{ parseToFixed(item.valueChange | numberSuffix) }}
             </span>
             <span *ngIf="options?.key === 'valueInEuro'">
-                {{ parseToFixed(item.valueChange ) }}
+                {{ parseToFixed(item.valueChange) }}
             </span>
         </span>
         <span *ngIf="!isNil(item.valueChange)" class="percentageChange">

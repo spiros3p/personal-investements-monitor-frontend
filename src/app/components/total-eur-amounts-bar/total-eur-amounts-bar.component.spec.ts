@@ -8,7 +8,7 @@ describe('TotalEurAmountsBarComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [TotalEurAmountsBarComponent]
+            declarations: [TotalEurAmountsBarComponent],
         });
         fixture = TestBed.createComponent(TotalEurAmountsBarComponent);
         component = fixture.componentInstance;

@@ -4,6 +4,7 @@
 /.vscode
 .browserslistrc
 # .editorconfig
+.angular
 
 # Compiled output
 /dist

@@ -8,7 +8,7 @@ describe('CurrentAmountDisplayComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [CurrentAmountDisplayComponent]
+            declarations: [CurrentAmountDisplayComponent],
         });
         fixture = TestBed.createComponent(CurrentAmountDisplayComponent);
         component = fixture.componentInstance;

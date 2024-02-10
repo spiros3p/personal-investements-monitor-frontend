@@ -74,10 +74,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "personal-investments-monitor-frontend:build:production"
+                          "buildTarget": "personal-investments-monitor-frontend:build:production"
                         },
                         "development": {
-                            "browserTarget": "personal-investments-monitor-frontend:build:development"
+                          "buildTarget": "personal-investments-monitor-frontend:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "personal-investments-monitor-frontend:build"
+                      "buildTarget": "personal-investments-monitor-frontend:build"
                     }
                 },
                 "lint": {

@@ -8,7 +8,7 @@ describe('RatesDisplayBarComponent', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [RatesDisplayBarComponent]
+            declarations: [RatesDisplayBarComponent],
         });
         fixture = TestBed.createComponent(RatesDisplayBarComponent);
         component = fixture.componentInstance;

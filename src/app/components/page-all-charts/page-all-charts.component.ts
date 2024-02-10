@@ -30,8 +30,8 @@ export class PageAllChartsComponent {
     );
 
     private findTotalEurFromCrypto(data: any[]) {
-        let total = 0
-        data.map(e => total += e[e.length-1]['valueInEuro'])
-        return total
+        let total = 0;
+        data.map((e) => (total += e[e.length - 1]['valueInEuro']));
+        return total;
     }
 }

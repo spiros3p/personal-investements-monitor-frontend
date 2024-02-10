@@ -1,1 +1,1 @@
-export * from './number-suffix.pipe'
+export * from './number-suffix.pipe';

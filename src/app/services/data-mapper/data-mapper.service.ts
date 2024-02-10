@@ -26,7 +26,9 @@ export class DataMapperService {
             if (desiredDays.includes(thatDate)) {
                 const index = desiredDays.indexOf(thatDate);
                 desiredDays = this.removeDateFromArray(desiredDays, thatDate, index);
-                res.push(this.mapToFinalForm(data[i], latestValue, daysAgo[index], key));
+                res.push(
+                    this.mapToFinalForm(data[i], latestValue, daysAgo[index], key)
+                );
             }
         }
         return res;
@@ -64,12 +66,12 @@ export class DataMapperService {
             percentageChange:
                 this.calcPercentageChange(e[key], latestValue).toFixed(1) + '%',
             daysAgo,
-            name: e.name
+            name: e.name,
         };
     }
 
     private calcPercentageChange(oldValue: any, newValue: any) {
-        if (oldValue == undefined || newValue == undefined) return 0
+        if (oldValue == undefined || newValue == undefined) return 0;
         return ((newValue - oldValue) / oldValue) * 100;
     }
 }
