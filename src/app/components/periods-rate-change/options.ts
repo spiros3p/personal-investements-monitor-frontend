@@ -29,7 +29,7 @@ export const optionsForValueChanges = {
         symbol: 'BTC',
         noOfDecimals: 8,
     },
-    'solana-net-balance': {
+    'sol-net-balance': {
         daysAgo: [1, 7, 30],
         key: 'value',
         symbol: 'SOL',
@@ -74,7 +74,7 @@ export const optionsForEuroChanges = {
         symbol: 'EUR',
         noOfDecimals: 2,
     },
-    'solana-net-balance': {
+    'sol-net-balance': {
         daysAgo: [1, 7, 30],
         key: 'valueInEuro',
         symbol: 'EUR',
