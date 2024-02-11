@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { tick } from '@angular/core/testing';
 import { Chart } from 'chart.js';
 import zoomPlugin from 'chartjs-plugin-zoom';
 Chart.register(zoomPlugin);
@@ -99,10 +98,10 @@ export class SingleChartComponent implements OnInit {
                         ticks: {
                             color: this.textColorSecondary,
                             callback: function (value: any, index: any, ticks: any) {
-                                if (Number(value) < 10) {
+                                if (Number(value) < 10 && Number(value) > -10) {
                                     return value.toFixed(2);
                                 }
-                                return value
+                                return value.toFixed(0)
                             },
                         },
                         grid: {
