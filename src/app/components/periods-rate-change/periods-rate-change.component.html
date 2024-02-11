@@ -7,29 +7,31 @@
 >
     @if (options?.key === 'valueInEuro') {
         <span class="symbol">€</span>
-    } 
-    <span
-        *ngFor="let item of itemList()"
-        class="badge"
-        [ngClass]="decideBadgeBG(item.valueChange)"
-    >
-        <i *ngIf="isPositive(item.valueChange)" class="bi bi-plus"></i>
-        <span *ngIf="!isNil(item.valueChange)" class="valueChange">
-            @if (options?.key === 'valueInEuro') {
-                <span>
-                    {{ parseToFixed(item.valueChange) }}
-                </span>
-            } @else if (options?.key === 'value') {
-                <span>
-                    {{ parseToFixed(item.valueChange | numberSuffix) }}
+    }
+    @for (item of itemList(); track item) {
+        <span class="badge" [ngClass]="decideBadgeBG(item.valueChange)">
+            @if (isPositive(item.valueChange)) {
+                <i class="bi bi-plus"></i>
+            }
+            @if (!isNil(item.valueChange)) {
+                <span class="valueChange">
+                    @if (options?.key === 'valueInEuro') {
+                        <span>
+                            {{ parseToFixed(item.valueChange) }}
+                        </span>
+                    } @else if (options?.key === 'value') {
+                        <span>
+                            {{ parseToFixed(item.valueChange | numberSuffix) }}
+                        </span>
+                    }
                 </span>
             }
+            @if (!isNil(item.valueChange)) {
+                <span class="percentageChange"> ({{ item.percentageChange }})</span>
+            } @else if (isNil(item.valueChange)) {
+                <span class="percentageChange"> (0%)</span>
+            }
+            <span class="daysAgo"> {{ item.daysAgo }}d </span>
         </span>
-        @if (!isNil(item.valueChange)) {
-            <span class="percentageChange"> ({{ item.percentageChange }})</span>
-        } @else if (isNil(item.valueChange)) {
-            <span class="percentageChange"> (0%)</span>
-        }
-        <span class="daysAgo"> {{ item.daysAgo }}d </span>
-    </span>
+    }
 </div>

@@ -8,12 +8,14 @@
                 [totalEurFromCrypto]="_totalEurFromCrypto()"
             ></app-total-eur-amounts-bar>
         </div>
-        <div class="col-auto mb-1" *ngFor="let data of resourcesData$ | async">
-            <app-single-chart
-                [resourceData]="data"
-                [optsForValueChanges]="optsForVal[data[0].name]"
-                [optsForEuroChanges]="optsForEur[data[0].name]"
-            ></app-single-chart>
-        </div>
+        @for (data of resourcesData$ | async; track data) {
+            <div class="col-auto mb-1">
+                <app-single-chart
+                    [resourceData]="data"
+                    [optsForValueChanges]="optsForVal[data[0].name]"
+                    [optsForEuroChanges]="optsForEur[data[0].name]"
+                ></app-single-chart>
+            </div>
+        }
     </div>
 </div>
