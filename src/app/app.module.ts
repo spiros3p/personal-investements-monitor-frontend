@@ -20,8 +20,9 @@ import { CurrentAmountDisplayComponent } from './components/current-amount-displ
 import { RatesDisplayBarComponent } from './components/rates-display-bar/rates-display-bar.component';
 import { TotalEurAmountsBarComponent } from './components/total-eur-amounts-bar/total-eur-amounts-bar.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { PageFeedsComponent } from './components/page-feeds/page-feeds.component';
 
-const STANDALONE_COMPONENTS = [MainMenuComponent];
+const STANDALONE_COMPONENTS = [MainMenuComponent, PageFeedsComponent];
 
 @NgModule({
     declarations: [

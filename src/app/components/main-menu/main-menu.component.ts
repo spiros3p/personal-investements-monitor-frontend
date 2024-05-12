@@ -24,10 +24,10 @@ export class MainMenuComponent implements OnInit {
         this.menuItems.set(items);
     }
 
-    private mapToMenuItem(d: any) {
+    private mapToMenuItem(d: any): MenuItem {
         return {
             label: d.title,
-            route: d.path,
+            routerLink: "/" + d.path,
         };
     }
 }
