@@ -1,0 +1,6 @@
+<app-item-feeds
+    *ngFor="let d of data$ | async; trackBy: byDataName"
+    class="alternate-bg"
+    [feedData]="d"
+    (submitEvent)="handleSubmit($event)"
+></app-item-feeds>

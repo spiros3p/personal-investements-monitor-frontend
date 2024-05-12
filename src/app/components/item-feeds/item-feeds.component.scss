@@ -1,0 +1,38 @@
+:host {
+    margin: 5px;
+    padding: 6px 8px;
+    border-radius: 5px;
+    display: block;
+}
+
+.ctrl-input {
+    margin-right: 29px;
+}
+
+.ctrl-label {
+    align-self: center;
+    overflow: hidden;
+
+    & b {
+        white-space: nowrap;
+    }
+
+    & .small-label {
+        font-size: 11px;
+    }
+
+    & .highlighted {
+        color: rgb(42, 113, 246);
+        font-weight: bold;
+    }
+}
+
+.btn-submit {
+    align-self: center;
+}
+
+.spinner {
+    transform: scale(0.4);
+    max-width: 18px;
+    height: 18px;
+}
