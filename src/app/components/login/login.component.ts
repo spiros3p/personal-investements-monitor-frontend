@@ -38,20 +38,28 @@ export class LoginComponent {
                 }, 700);
             },
             error: (error: HttpErrorResponse) => {
-                if (typeof error.error.error === 'undefined') {
+                if (!!error?.error?.message) {
                     this._toasterService.add({
                         severity: 'error',
                         summary: 'Error',
                         detail: `ERROR: ${error.error.message}`,
                     });
                     console.error(error.error);
-                } else {
+                } else if (!!error?.error?.error?.message) {
                     this._toasterService.add({
                         severity: 'error',
                         summary: 'Error',
                         detail: `ERROR: ${error.error.error.message}`,
-                    });
+                    }); 
                     console.error(`ERROR: ${error.error.error.message}`);
+                } else {
+                    const err = JSON.stringify(error?.error ?? error)
+                    this._toasterService.add({
+                        severity: 'error',
+                        summary: 'Error',
+                        detail: `ERROR: ${err}`,
+                    }); 
+                    console.error(error);
                 }
             },
         });
