@@ -1,0 +1,30 @@
+name: Building and deploying Angular application
+
+on:
+    push:
+        branches: ['master']
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Use Node.js v18
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: Install Dependencies
+              run: npm install
+
+            - name: Build Angular app
+              run: npm run build
+
+            - name: Deploy to gh pages
+              run: |
+                  npx angular-cli-ghpages@1.0.6 --dir=docs --name="Spiros" --email=spiros3p@gmail.com --no-silent
+              env:
+                  CI: true
+                  GH_TOKEN: ${{ secrets.GH_TOKEN }}
