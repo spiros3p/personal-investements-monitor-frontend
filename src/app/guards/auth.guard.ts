@@ -21,17 +21,14 @@ export class AuthGuard {
      */
     canActivate() {
         return new Observable<boolean>((x) => {
-            this.authService.isAuthenticated().subscribe(
-                (msg) => {
-                    x.next(true);
-                },
-                (error) => {
+            this.authService.isAuthenticated().subscribe({
+                next: (msg) => {
+                    x.next(msg);
+                    if (msg) return;
                     localStorage.clear();
-                    // this.uiService.checkAuth();
                     this.router.navigate(['/login']);
-                    x.next(false);
-                }
-            );
+                },
+            });
         });
     }
 }
