@@ -19,6 +19,9 @@ import { NumberSuffixPipe } from './pipes/number-suffix';
 import { CurrentAmountDisplayComponent } from './components/current-amount-display/current-amount-display.component';
 import { RatesDisplayBarComponent } from './components/rates-display-bar/rates-display-bar.component';
 import { TotalEurAmountsBarComponent } from './components/total-eur-amounts-bar/total-eur-amounts-bar.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+
+const STANDALONE_COMPONENTS = [MainMenuComponent];
 
 @NgModule({
     declarations: [
@@ -33,6 +36,7 @@ import { TotalEurAmountsBarComponent } from './components/total-eur-amounts-bar/
         TotalEurAmountsBarComponent,
     ],
     imports: [
+        ...STANDALONE_COMPONENTS,
         BrowserModule,
         AppRoutingModule,
         NgbModule,

@@ -4,10 +4,16 @@ import { PageAllChartsComponent } from './components/page-all-charts/page-all-ch
 import { AuthGuard } from 'src/app/guards/auth.guard';
 import { LoginComponent } from './components/login/login.component';
 
-const routes: Routes = [
-    { path: '', component: PageAllChartsComponent, canActivate: [AuthGuard] },
-    { path: 'login', component: LoginComponent },
+export const mainRoutes: Routes = [
+    {
+        path: '',
+        component: PageAllChartsComponent,
+        canActivate: [AuthGuard],
+        title: 'Home',
+    },
 ];
+
+const routes: Routes = [...mainRoutes, { path: 'login', component: LoginComponent }];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
