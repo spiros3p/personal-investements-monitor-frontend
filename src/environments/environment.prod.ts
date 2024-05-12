@@ -1,7 +1,7 @@
 export const environment = {
     production: true,
     endpoints: {
-        resourceDataServerApi: 'https://pim-api.spiros.tpsflavor.site',
+        resourceDataServerApi: 'https://pim-api.spiros.tpsflavor.gr',
     },
     localStorageKey: {
         token: 'token',
