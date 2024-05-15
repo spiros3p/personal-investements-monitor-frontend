@@ -12,6 +12,8 @@
             inputId="ctrlValue"
             formControlName="inputValue"
             mode="decimal"
+            [minFractionDigits]="0"
+            [maxFractionDigits]="8"
             [disabled]="loading()"
         />
         <p-button
