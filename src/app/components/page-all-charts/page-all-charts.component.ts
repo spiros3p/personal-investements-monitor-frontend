@@ -22,6 +22,7 @@ export class PageAllChartsComponent {
             this._ratesData.set(e.filter((d) => d[0].type == 'Percentage'))
         ),
         map((e: any[]) => e.filter((d) => d[0].type == 'Amount')),
+        map((e: any[]) => e.filter((d) => d[d.length-1]['valueInEuro'] > 0)),
         tap((e) => this._totalEurFromCrypto.set(this.findTotalEurFromCrypto(e)))
     );
     ratesData$: Observable<any> = this.resourceApi.getResourcesData().pipe(
