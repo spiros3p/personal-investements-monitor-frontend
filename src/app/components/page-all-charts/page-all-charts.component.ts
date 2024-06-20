@@ -31,13 +31,21 @@ export class PageAllChartsComponent {
     );
 
     private findTotalEurFromCrypto(data: any[]) {
-        const validTimeframeOfLastValRecord = 86400000; // 24h in ms
         const t = data.reduce((sum, v) => {
-            const now = new Date().getTime();
-            const valueDate = new Date(v[v.length - 1]['timeStamp']).getTime();
-            if (now - valueDate > validTimeframeOfLastValRecord) return sum + 0;
+            if (this.checkLastValidDate(v)) return sum;
             return sum + v[v.length - 1]['valueInEuro'];
         }, 0);
         return t;
+    }
+
+    private checkLastValidDate(val: any) {
+        const validTimeframeOfLastValRecord = 86400000; // 24h in ms
+        const now = new Date().getTime();
+        const valueDate = new Date(val[val.length - 1]['timeStamp']).getTime();
+        if (now - valueDate > validTimeframeOfLastValRecord) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
